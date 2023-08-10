@@ -1,0 +1,14 @@
+.blog-section__wrapper{
+    margin-bottom: -30px;
+
+    @include breakpoint(small){ margin-bottom: -30px;}
+    @include breakpoint(large){ margin-bottom: -30px;}
+}
+
+.blog-section__wrapper > .container > .row > .col-12{
+    margin-bottom: 30px;
+
+    @include breakpoint(medium){
+        margin-bottom: 30px;
+    }
+}

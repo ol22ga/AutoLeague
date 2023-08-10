@@ -1,0 +1,147 @@
+.cart__error {
+    font-size: 18px;
+    color: $themeColor;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.cart__product {
+    border: 1px solid #ededed;
+    padding: 20px;
+
+    .row {
+
+    }
+}
+.cart__img {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 400px) {
+        width: 100% !important;
+    }
+}
+
+.cart__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+
+    @media (max-width: 400px) {
+        width: 100% !important;
+    }
+
+    .count-product {
+        width: 100%;
+        justify-content: end !important;
+    }
+}
+
+.cart__wrapper {
+    width: 100%;
+
+    margin: 10px 0;
+
+    @include breakpoint(small){
+        margin: 0;
+    }
+
+    .cart__text-product {
+        min-height: 50px;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-align: start;
+        margin-bottom: 0;
+        display: none;
+
+
+        @include breakpoint(small){
+            display: -webkit-box;
+        }
+    }
+}
+
+.cart__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @include breakpoint(small){
+        margin-bottom: 0;
+    }
+
+    p {
+        min-height: 50px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-align: start;
+        margin-bottom: 0;
+
+        @include breakpoint(small){
+            min-height: 25px;
+            -webkit-line-clamp: 1;
+        }
+    }
+
+    button {
+        transition: $baseTransition;
+
+        &:hover {
+            color: $themeColor;
+        }
+    }
+}
+
+.cart-result {
+    border: 1px solid #ededed;
+
+    h3 {
+        color: #ffffff;
+        line-height: 36px;
+        padding: 5px 15px;
+        background: #333;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.cart-result__inner {
+    padding: 10px 20px 25px;
+
+    p {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+}
+
+.cart-result__subtotal {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        font-weight: 600;
+        font-size: 14px;
+
+        span {
+            margin-right: 30px;
+        }
+    }
+
+    .cart-result__amount {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}

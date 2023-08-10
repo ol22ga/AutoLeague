@@ -1,0 +1,11 @@
+.slick-slide{
+    outline: none;
+}
+.fix-slider-dots .slick-dots li button {
+    text-indent: -9999px;
+    font-size: 0;
+    padding: 0;
+}
+
+@import "slider/product";
+@import "slider/logo";

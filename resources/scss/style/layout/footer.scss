@@ -1,0 +1,114 @@
+.footer__logo{
+    margin-bottom: 25px;
+}
+
+.footer__contact{
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.customer-support__connection {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 600;
+    color: $bodyColor;
+    font-family: $secondery-font;
+
+    &:hover{
+        color: $themeColor;
+    }
+}
+
+.footer__title{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.footer-widget-subscribe{
+    margin-top: 30px;
+    @include breakpoint(small){
+        margin-top: 0;
+    }
+}
+
+.footer__text{
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.footer__widget--menu{
+    padding-left: 0px;
+
+    @include breakpoint(large){
+        padding-left: 65px;
+    }
+}
+
+
+.footer__menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__nav{
+    & > li{
+        line-height: 30px;
+    }
+
+    & > li > a{
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        color: $bodyColor;
+        &:hover{
+            color: $themeColor;
+            transform: translateX(10px);
+        }
+    }
+}
+
+//.footer__bottom{
+//    padding: 15px 0;
+//}
+
+.footer__copyright{
+    text-transform: capitalize;
+    font-size: 14px;
+    text-align: center;
+
+    @include breakpoint(medium){
+        text-align: left;
+    }
+}
+
+.copyright-area-text{
+    color: $bodyColor;
+    margin-bottom: 10px;
+    @include breakpoint(medium){
+        margin-bottom: 0;
+    }
+}
+
+.footer__link{
+    font-weight: 600;
+    color: $themeColor;
+    &:hover{
+        color: $themeColor;
+    }
+}
+
+.footer__payment{
+    text-align: center;
+    @include breakpoint(medium){
+        text-align: right;
+    }
+}

@@ -1,0 +1,21 @@
+.order__th--left,
+.order__td--left{
+    text-align: left !important;
+}
+
+.order__th--right,
+.order__td--right{
+    text-align: right !important;
+}
+
+.order form {
+    padding: 20px;
+}
+
+.order .cart-result__subtotal:last-child p {
+    margin-bottom: 0;
+}
+
+.cart-result h3 {
+    margin-bottom: 0 !important;
+}

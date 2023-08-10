@@ -1,0 +1,53 @@
+.dashboard{
+    margin-bottom: 50px;
+    @include breakpoint(medium){margin-bottom: 0;}
+    ul li {
+        margin-bottom: 5px;
+        a{
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 500;
+            text-transform: capitalize;
+            background: #333;
+            &:hover,
+            &.active{background: $themeColor;}
+        }
+    }
+}
+
+.dashboard__link {
+    font-size: 14px;
+    color: $themeColor;
+    font-weight: 500;
+
+    border-radius: 0 !important;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.dashboard__content {
+    h4 {
+        font-size: 22px;
+        text-transform: capitalize;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    h5 {
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        a {
+            color: $themeColor;
+            font-weight: 500;
+        }
+    }
+}

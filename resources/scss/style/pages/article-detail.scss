@@ -1,0 +1,33 @@
+.article-detail__title{
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.article-detail__img{
+    margin-bottom: 40px;
+    img{
+        height: 440px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.article-detail__blockquote {
+    padding: 15px 30px;
+    background: $gray-200;
+    border-left: 2px solid $themeColor;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.article-detail__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-detail__count {
+    margin-left: 5px;
+}

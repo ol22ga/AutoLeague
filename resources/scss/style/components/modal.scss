@@ -1,0 +1,55 @@
+.modal{
+    z-index: 99999;
+    background: rgba($black, .5);
+    &-dialog{
+        max-width: calc(100% - 20px) !important;
+        margin: 0 auto !important;
+
+        @include breakpoint(medium){
+            max-width: 730px !important;
+        }
+        @include breakpoint(large){
+            max-width: 870px !important;
+        }
+        @include breakpoint(xlarge){
+            min-width: 825px !important;
+        }
+
+    }
+
+    &-close {
+        width: 40px;
+        height: 40px;
+        border: 1px solid $bodyColor;
+        border-radius: 50%;
+        color: $bodyColor;
+        transition: $baseTransition;
+
+        &:hover {
+            border: 1px solid $themeColor;
+            color: $themeColor;
+        }
+    }
+
+    padding-right: 0 !important;
+
+    &-border{
+        border-left:none;
+        @include breakpoint(large){
+            border-left: 1px solid $borderColor;
+        }
+    }
+
+}
+
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+@import "modal/add-cart";

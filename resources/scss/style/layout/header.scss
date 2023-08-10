@@ -1,0 +1,331 @@
+.header__top{
+    font-size: 13px;
+}
+
+.header__menu--user{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    & > li{
+        margin-right: 40px;
+        &:last-child{margin-right: 0;}
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "|";
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(0% - 20px);
+        }
+        &:last-child::after{
+            display: none;
+        }
+    }
+
+    & > li > a{
+        display: inline-block;
+        line-height: 46px;
+    }
+}
+
+.header__dropdown--user{
+    position: relative;
+    padding-right: 15px;
+
+    &::before{
+        content: "\f107";
+        font-family: "FontAwesome";
+        position: absolute;
+        top: calc(50%);
+        right: 0;
+        transform: translateY(-50%);
+        font-weight: 400;
+    }
+}
+
+.header__submenu--user{
+    position: absolute;
+    top: calc(100%);
+    transform: translateY(30px);
+    left: calc(0% - 20px);
+    right: auto;
+    padding: 10px 15px;
+    width: 160px;
+    background: $white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    transition: $baseTransition;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+
+    & > li{
+        display: block;
+        border-bottom: 1px solid $borderColor;
+        padding: 5px 0;
+        &:last-child{border-bottom: none;}
+    }
+
+    & > li > a{
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:hover{color:$themeColor;}
+    }
+}
+
+//.user-sub-menu-in-icon{padding-right: 5px;}
+
+.header__dropdown--user:hover .header__submenu--user{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.header__center{
+    padding: 30px 0;
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+}
+
+.header__list-icon{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+
+    & > li{
+        margin-right: 40px;
+        &:last-child{margin-right: 0;}
+    }
+
+    & > li > a{
+        position: relative;
+        font-size: 27px;
+        color: #333;
+        &:hover{
+            color: $themeColor;
+        }
+    }
+
+    & > li > a:hover .header-action-icon-item-count{
+        background: $themeColor;
+    }
+}
+
+.header__count{
+    position: absolute;
+    top: 0;
+    right: -8px;
+    font-size: 10px;
+    display: inline-block;
+    background: #333;
+    color: $white;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    transition: $baseTransition;
+}
+
+.header__bottom{
+    background: $headingColor;
+    position: relative;
+}
+
+.sticky-header.sticky {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    background: $headingColor;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    animation-name: fadeInDown;
+    animation-duration: 900ms;
+    animation-timing-function: cubic-bezier(0.2, 1, 0.22, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    border-bottom: 0;
+}
+
+.main-menu{
+    position: relative;
+    nav > ul > li{
+        position: relative;
+        display: inline-block;
+    }
+
+    nav > ul > .has-dropdown{
+
+        margin-right: 5px;
+        &:last-child{margin-right: 0;}
+    }
+    nav > ul > .has-megaitem{
+        position: static;
+    }
+
+    nav > ul > li > a{
+        display: block;
+        line-height: 24px;
+        padding: 15px 30px;
+        font-size: 16px;
+        line-height: 30px;
+        text-transform: capitalize;
+        font-weight: 500;
+        color: $white;
+
+        &:hover,
+        &.active{
+            background: $themeColor;
+            color: $white;
+        }
+    }
+}
+
+.main-menu__sub > li > a,
+.mega-menu__sub > li > a {
+    font-weight: 400;
+    display: block;
+    line-height: 35px;
+    text-transform: capitalize;
+    color: $bodyColor;
+    position: relative;
+    transition: $baseTransition;
+
+    &::after{
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translate(0px, -50%);
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background: $themeColor;
+        visibility: hidden;
+        opacity: 0;
+        transition: $baseTransition;
+    }
+
+    &:hover{
+        color: $themeColor;
+        transform: translateX(10px);
+    }
+
+    &:hover::after{
+        transform: translate(-10px, -50%);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.main-menu__sub{
+    position: absolute;
+    min-width: 230px;
+    padding: 25px 20px;
+    background: $white;
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0 0 0;
+    left: 0;
+    right: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 99;
+    top: 100%;
+    text-align: left;
+}
+
+.mega-menu{
+    position: absolute;
+    min-width: 100%;
+    padding: 25px 30px 30px 30px;
+    background: $white;
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0 0 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 99;
+    top: 100%;
+    text-align: left;
+}
+
+.mega-menu__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mega-menu__title{
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 13px;
+    color: $headingColor;
+    &:hover{
+        color: $themeColor;
+    }
+}
+
+.mega-menu__sub > li{
+    display: block;
+}
+
+.main-menu nav > ul > li:hover .main-menu__sub,
+.main-menu nav > ul > li:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.mega-menu__banner{
+    margin-top: 20px;
+
+    & > a{
+        display: block;
+        width: 100%;
+    }
+
+    & img{
+        width: 100%;
+    }
+}
+
+.header--mobile__wrapper{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.header--mobile__menu{
+    padding: 5px;
+    display: block;
+}
+
+.header--mobile .header__list-icon {
+    margin-right: 0;
+}
+
+//.header--mobile__left {
+//    a {
+//        width: 100%;
+//    }
+//
+//    @media (max-width: 575px) {
+//        width: 50%;
+//    }
+//}
+//
+//.header--mobile__img {
+//    width: 100%;
+//    height: auto;
+//}

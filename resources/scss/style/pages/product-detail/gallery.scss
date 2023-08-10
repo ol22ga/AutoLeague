@@ -1,0 +1,110 @@
+.product-gallery__wrapper{
+    margin-bottom: 60px;
+}
+.product-gallery__slider--large {
+    overflow: hidden;
+    border: 1px solid $borderColor;
+    img{
+        width: 100%;
+    }
+}
+
+.product-gallery__slider--small{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+    .slick-list{
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+    }
+    .slick-slide{
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+    }
+
+    img{
+        border: 1px solid $borderColor;
+    }
+
+    &:hover .product-gallery__nav{
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+.product-gallery__nav{
+    z-index: 9;
+    width: 30px;
+    height: 30px;
+    background: $gray-200;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: $baseTransition;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover{
+        background: $themeColor;
+        color: $white;
+    }
+}
+
+
+.product-gallery__nav--left {
+    left: 0;
+
+}
+.product-gallery__nav--right {
+    right: 0;
+}
+
+//.product-large-image-single-slider{
+//    img{
+//        width: 100%;
+//        border: 1px solid $borderColor;
+//        position: relative;
+//    }
+//
+//    &:hover .product-gallery__nav{
+//        visibility: visible;
+//        opacity: 1;
+//    }
+//
+//    .slick-list{
+//        margin-left: -15px;
+//        margin-right: -15px;
+//    }
+//    .slick-slide{
+//        margin-left: 15px;
+//        margin-right: 15px;
+//    }
+//}
+
+//.product-image-gallery-single {
+//    width: calc(50% - 20px);
+//    overflow: hidden;
+//    float: left;
+//}
+//
+//.product-image-gallery-single img {
+//    width: 100%;
+//    border: 1px solid  $borderColor;
+//}
+//
+//// Sticky
+//.product-image-sticky-single {
+//    overflow: hidden;
+//    text-align: center;
+//    margin-bottom: 30px;
+//}
+//
+//.product-image-sticky-single img {
+//    max-width: 100%;
+//    border: 1px solid $borderColor;
+//}

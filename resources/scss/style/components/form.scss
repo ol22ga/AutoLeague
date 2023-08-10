@@ -1,0 +1,240 @@
+.form {
+    background: $gray-100;
+    padding: 40px 30px;
+}
+
+.form__item {
+    label {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: inline;
+
+        span {
+            color: $themeColor;
+            font-size: 16px;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    input[type="file"],
+    textarea {
+        border: 1px solid $borderColor;
+        background: none;
+        height: 40px;
+        width: 100%;
+        padding: 0 20px;
+        color: $bodyColor;
+
+        &::placeholder {
+            font-size: 14px;
+        }
+
+        outline: none;
+
+        &:focus {
+            border-color: $themeColor !important;
+        }
+    }
+
+    input[type="file"] {
+        padding: 0;
+
+        &::-webkit-file-upload-button {
+            height: 100%;
+            width: 50%;
+            color: $white;
+            border: none;
+            background: $headingColor;
+            margin-right: 20px;
+            transition: $baseTransition;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 70%;
+            }
+        }
+
+        //&::--moz-file-upload-button
+    }
+
+    textarea {
+        height: 100px;
+        padding: 20px;
+        max-height: 300px;
+        min-height: 150px;
+    }
+
+    input.is-invalid,
+    textarea.is-invalid {
+        border-color: $themeColor;
+    }
+
+    .invalid-feedback {
+        color: $themeColor;
+    }
+
+    .form__select {
+        .list {
+        max-height: 150px;
+        overflow-y: scroll;
+        }
+    }
+
+}
+
+.form--search{
+    position: relative;
+}
+
+.form--search__input{
+    padding: 10px 90px 10px 20px;
+    font-size: 13px;
+    box-shadow: none;
+    outline:none;
+}
+
+.form--search__btn{
+    padding: 10px 30px;
+    border: 2px solid $themeColor;
+    background-color: $themeColor;
+    font-weight: 600;
+    color: $white;
+    transition: $baseTransition;
+    line-height: 1.6;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    &:hover{
+        border-color: $headingColor;
+        background: $headingColor;
+    }
+    i{
+        color: $white;
+        font-size: 18px;
+    }
+}
+
+.mobile-search-style-input-box{
+    padding: 7px 12px;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    box-shadow: none;
+    outline:none;
+}
+
+.mobile-search-style-input-btn{
+    padding: 7px 12px;
+    background-color: $themeColor;
+    border-radius: 0 5px 5px 0;
+    font-weight: 600;
+    transition: $baseTransition;
+    &:hover{
+        background: $bodyColor;
+    }
+    i{
+        color: $white;
+        font-size: 18px;
+    }
+}
+
+.form__item--checkbox{
+    line-height: 1;
+    & > span{
+        display: inline-block;
+        transform: translateX(35px);
+        text-transform: capitalize;
+        color: $bodyColor !important;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    input {
+        appearance: none;
+        position: relative;
+        line-height: 0;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 1px solid $gray-300;
+            line-height: 20px;
+            text-align: center;
+        }
+        &:checked::after {
+            position: absolute;
+            content: "\f00c";
+            background: $themeColor;
+            border-color: $themeColor;
+            font-family: "FontAwesome";
+            color: $white;
+        }
+        span{font-size: 14px;}
+    }
+
+    .invalid-feedback {
+        color: $themeColor;
+        margin-top: 6px;
+    }
+}
+
+.form--search__input--subscribe{
+    padding: 10px 150px 11px 20px;
+    box-shadow: none;
+    outline:none;
+}
+
+.form__error {
+    color: $themeColor;
+}
+
+.form__inner {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    button {
+        color: $headingColor;
+        padding: 0;
+        transition: $baseTransition;
+
+        &:hover {
+            color: $themeColor;
+        }
+
+        &:disabled {
+            pointer-events: none;
+        }
+    }
+}
+
+.form__timer {
+    text-align: right;
+
+    color: $headingColor;
+
+    &.active {
+        color: $themeColor;
+    }
+}
+
+.nice-select {
+    border-radius: 0;
+
+    &.form__select.is-invalid + .nice-select {
+        border-color: $themeColor !important;
+    }
+}
+
+.nice-select:active, .nice-select.open, .nice-select:focus {
+    border-color: $themeColor !important;
+}

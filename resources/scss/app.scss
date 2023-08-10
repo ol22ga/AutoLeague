@@ -1,0 +1,54 @@
+html {
+    overflow-x: hidden;
+}
+
+//Bootstrap
+@import "bootstrap/functions";
+@import "base/variabls";
+@import "bootstrap/bootstrap";
+@import "base/mixins";
+//Основные стили
+@import "base/common";
+@import "base/utilities";
+@import "base/animation";
+@import "base/material-scrolltop";
+
+//Шаблоны
+@import "style/layout/header";
+@import "style/layout/offcanvas";
+@import "style/layout/footer";
+@import "style/layout/button";
+@import "style/layout/product/default";
+@import "style/layout/product/list";
+
+//Компоненты
+@import "style/components/breadcrumb";
+@import "style/components/accordian";
+@import "style/components/form";
+@import "style/components/sidebar";
+@import "style/components/filter-price";
+@import "style/components/pagination";
+@import "style/components/article";
+@import "style/components/comment";
+@import "style/components/table";
+@import "style/components/dashboard";
+@import "style/components/slider";
+@import "style/components/tab";
+@import "style/components/modal";
+@import "style/components/count";
+
+//Страницы
+@import "style/pages/welcome";
+@import "style/pages/about-us";
+@import "style/pages/faq";
+@import "style/pages/contact";
+@import "style/pages/404";
+@import "style/pages/privacy-policy";
+@import "style/pages/account";
+@import "style/pages/cart";
+@import "style/pages/checkout";
+
+@import "style/pages/compare";
+
+@import "style/pages/article-detail";
+@import "style/pages/product-detail";

@@ -1,0 +1,59 @@
+.accordian {
+    width: 100%;
+    margin: 40px auto 30px auto;
+    text-align: left;
+    margin-bottom: -15px;
+}
+
+.accordian__item{
+    margin-bottom: 15px;
+}
+
+.accordian label {
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    cursor: pointer;
+    border: 1px solid $borderColor;
+    color: #222;
+    line-height: 40px;
+    font-size: 18px;
+    transition: $baseTransition;
+}
+
+
+.accordian label:hover { color : $themeColor;}
+.accordian input:checked + label,
+.accordian input:checked + label:hover {
+    background: $themeColor;
+    color: $white;
+    border: 1px solid $themeColor;
+}
+
+.accordian input { display: none; }
+.accordian .accordian__content {
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 10;
+    transition: 0.3s line-height;
+}
+.accordian .accordian__content p {
+    padding: 10px 20px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.9;
+
+}
+.accordian input:checked ~ .accordian__content {
+    transition: 0.3s line-height;
+    border-right: 1px solid $borderColor;
+    border-left: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor
+}
+
+.accordian input:checked ~ .accordian__content { height: 100% }

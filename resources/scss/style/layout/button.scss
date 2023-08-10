@@ -1,0 +1,55 @@
+.button{
+    background: $themeColor;
+    display: inline-block;
+    color: $white !important;
+    padding: 10px 15px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    transition: $baseTransition;
+
+    //@include breakpoint(small){
+    //    padding: 15px 30px;
+    //}
+
+    &--dark {
+        background: $headingColor;
+
+        &:hover {
+            background: $themeColor !important;
+        }
+    }
+
+    &:hover {
+        background: $headingColor;
+    }
+    //&::after{
+    //    position: absolute;
+    //    content: "";
+    //    width: 0%;
+    //    height: 100%;
+    //    top: 0;
+    //    left: auto;
+    //    right: 0;
+    //    transition: $baseTransition;
+    //    z-index: -1;
+    //    background: $headingColor;
+    //}
+}
+
+//.button:hover::after{
+//    width: 100%;
+//    left: 0;
+//    right: auto;
+//}
+
+//.button--dark {
+//    background: $headingColor;
+//
+//    &::after{
+//        background: $themeColor;
+//    }
+//}

@@ -1,0 +1,18 @@
+.modal-add-cart__info {
+    font-weight: 500;
+    margin-bottom: 40px;
+    li{
+        margin-bottom: 10px;
+        &:last-child{margin-bottom: 0;}
+    }
+    span{
+        font-weight: 300;
+        padding-left: 5px;
+    }
+}
+
+.modal-add-cart__info i {
+    color: $themeColor;
+    padding-right: 10px;
+    font-size: 16px;
+}
